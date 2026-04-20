@@ -1,0 +1,88 @@
+{
+  "time": "2024-01-07T11:25:20-7:00",
+  "data": {
+    "monthlyCost": {
+        "currency": "EUR",
+        "amount": 600
+    },
+    "cpuUsage": {
+      "metric": "CPU Usage",
+      "namespace": "CPU Profile",
+      "dimNames": [
+        "Core Status"
+      ],
+      "series": [
+        {
+          "dimValues": [
+            "Cores In Use"
+          ],
+          "value": 1
+        },
+        {
+          "dimValues": [
+            "Cores Available"
+          ],
+          "value": 8
+        }
+      ]
+    },
+    "memoryUsage": {
+      "metric": "Memory Usage",
+      "namespace": "Memory Profile",
+      "dimNames": [
+        "Memory Status"
+      ],
+      "series": [
+        {
+          "dimValues": [
+            "Memory In Use GB"
+          ],
+          "value": 16
+        },
+        {
+          "dimValues": [
+            "Total Memory GB"
+          ],
+          "value": 16
+        }
+      ]
+    },
+    "diskUsage": {
+      "metric": "Disk Usage",
+      "namespace": "Disk Profile",
+      "dimNames": [
+        "Volume"
+      ],
+      "series": [
+        {
+          "dimValues": [
+            "Volume A Free Space GB"
+          ],
+          "value": 2250
+        },
+        {
+          "dimValues": [
+            "Volume A Total Space GB"
+          ],
+          "value": 2500
+        }
+      ]
+    },
+    "networkBandwidth": {
+      "metric": "Network Bandwidth",
+      "namespace": "Network Profile",
+      "dimNames": [
+        "Bandwidth Status"
+      ],
+      "series": [
+        {
+          "dimValues": [
+            "Bandwidth Utilization Percent"
+          ],
+          "value": 10
+        }
+        
+      ]
+    }
+  }
+}
