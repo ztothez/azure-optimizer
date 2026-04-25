@@ -19,4 +19,4 @@ if st.button("Run Audit"):
             status.text(update)
         else:
             status.text("Generating report...")
-            report_placeholder.markdown(update)
+            report_placeholder.text(update)
