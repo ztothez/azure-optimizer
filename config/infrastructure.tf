@@ -3,53 +3,50 @@ resource "azurerm_resource_group" "main" {
   location = "West Europe"
 }
 
-resource "azurerm_app_service_plan" "main" {
+resource "azurerm_service_plan" "main" {
   name                = "ztothez-app-plan"
   location            = azurerm_resource_group.main.location
   resource_group_name = azurerm_resource_group.main.name
+  os_type             = "Windows"
+  sku_name            = "P3v2"
+  worker_count        = 2
 
   tags = {
     environment = "production"
     team        = "engineering"
   }
-
-  sku {
-    tier     = "Premium"
-    size     = "P3v2"
-    capacity = 2
-  }
 }
 
-resource "azurerm_app_service_plan" "sales" {
+resource "azurerm_service_plan" "sales" {
   name                = "ztothez-appserviceplan"
   location            = azurerm_resource_group.main.location
   resource_group_name = azurerm_resource_group.main.name
-
-  sku {
-    tier     = "Standard"
-    size     = "S1"
-    capacity = 2
-  }
+  os_type             = "Windows"
+  sku_name            = "S1"
+  worker_count        = 2
 }
 
-resource "azurerm_app_service" "offsite" {
-  name                = "ztothez-app-service"
-  location            = azurerm_resource_group.main.location
-  resource_group_name = azurerm_resource_group.main.name
-  app_service_plan_id = azurerm_app_service_plan.main.id
-  https_only          = true
-  client_cert_enabled = true
+resource "azurerm_windows_web_app" "offsite" {
+  name                       = "ztothez-app-service"
+  location                   = azurerm_resource_group.main.location
+  resource_group_name        = azurerm_resource_group.main.name
+  service_plan_id            = azurerm_service_plan.main.id
+  https_only                 = true
+  client_certificate_enabled = true
 
   identity {
     type = "SystemAssigned"
   }
 
   site_config {
-    dotnet_framework_version = "v8.0"
-    ftps_state               = "FtpsOnly"
-    http2_enabled            = true
-    min_tls_version          = "1.2"
-    scm_type                 = "None"
+    ftps_state          = "FtpsOnly"
+    http2_enabled       = true
+    minimum_tls_version = "1.2"
+
+    application_stack {
+      current_stack  = "dotnet"
+      dotnet_version = "v8.0"
+    }
   }
 
   auth_settings {
