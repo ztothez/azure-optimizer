@@ -1,13 +1,3 @@
----
-title: Azure Optimizer
-emoji: ☁️
-colorFrom: blue
-colorTo: purple
-sdk: docker
-app_port: 7860
-pinned: false
----
-
 # Azure Optimizer ☁️
 
 AI-powered multi-agent infrastructure analysis platform that reviews Terraform configurations and operational metrics to identify configuration drift, resource waste, optimization opportunities, and infrastructure improvements through AI-assisted reporting.
@@ -141,7 +131,3 @@ app_port: 7860
 ## Project Goal
 
 The goal of Azure Optimizer is to explore how AI-assisted infrastructure analysis and operational telemetry can be combined into practical engineering workflows for cloud optimization, governance analysis, and operational visibility.
-npm install
-npm run build
-npm run start
-```
