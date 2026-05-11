@@ -1,88 +1,52 @@
 {
-  "time": "2024-01-07T11:25:20-7:00",
-  "data": {
-    "monthlyCost": {
-        "currency": "EUR",
-        "amount": 600
+  "summary": {
+    "resources": 142,
+    "potentialSavings": {
+      "currency": "EUR",
+      "amount": 3240
     },
-    "cpuUsage": {
-      "metric": "CPU Usage",
-      "namespace": "CPU Profile",
-      "dimNames": [
-        "Core Status"
-      ],
-      "series": [
-        {
-          "dimValues": [
-            "Cores In Use"
-          ],
-          "value": 1
-        },
-        {
-          "dimValues": [
-            "Cores Available"
-          ],
-          "value": 8
-        }
-      ]
+    "issuesFound": 28,
+    "healthScore": 78
+  },
+  "issueMix": [
+    { "severity": "Critical", "count": 0 },
+    { "severity": "High", "count": 2 },
+    { "severity": "Medium", "count": 1 },
+    { "severity": "Low", "count": 1 }
+  ],
+  "topRecommendations": [
+    { "title": "Right-size VM instances", "impact": "€1,420/mo" },
+    { "title": "Remove unused resources", "impact": "€820/mo" },
+    { "title": "Optimize storage accounts", "impact": "€540/mo" },
+    { "title": "Review networking costs", "impact": "€460/mo" }
+  ],
+  "recentAnalysis": [
+    {
+      "environment": "Production Environment",
+      "time": "May 10, 2024 10:30 AM",
+      "status": "Completed",
+      "score": 82
     },
-    "memoryUsage": {
-      "metric": "Memory Usage",
-      "namespace": "Memory Profile",
-      "dimNames": [
-        "Memory Status"
-      ],
-      "series": [
-        {
-          "dimValues": [
-            "Memory In Use GB"
-          ],
-          "value": 16
-        },
-        {
-          "dimValues": [
-            "Total Memory GB"
-          ],
-          "value": 16
-        }
-      ]
+    {
+      "environment": "Staging Environment",
+      "time": "May 10, 2024 09:15 AM",
+      "status": "Completed",
+      "score": 74
     },
-    "diskUsage": {
-      "metric": "Disk Usage",
-      "namespace": "Disk Profile",
-      "dimNames": [
-        "Volume"
-      ],
-      "series": [
-        {
-          "dimValues": [
-            "Volume A Free Space GB"
-          ],
-          "value": 2250
-        },
-        {
-          "dimValues": [
-            "Volume A Total Space GB"
-          ],
-          "value": 2500
-        }
-      ]
-    },
-    "networkBandwidth": {
-      "metric": "Network Bandwidth",
-      "namespace": "Network Profile",
-      "dimNames": [
-        "Bandwidth Status"
-      ],
-      "series": [
-        {
-          "dimValues": [
-            "Bandwidth Utilization Percent"
-          ],
-          "value": 10
-        }
-        
-      ]
+    {
+      "environment": "Dev Environment",
+      "time": "May 9, 2024 04:45 PM",
+      "status": "Completed",
+      "score": 69
     }
-  }
+  ],
+  "infrastructureHealth": [
+    { "date": "May 4", "score": 95 },
+    { "date": "May 5", "score": 74 },
+    { "date": "May 6", "score": 80 },
+    { "date": "May 7", "score": 54 },
+    { "date": "May 8", "score": 62 },
+    { "date": "May 9", "score": 71 },
+    { "date": "May 10", "score": 89 }
+  ]
 }

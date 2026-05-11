@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-az-bg-deep: #050814;
+  --color-az-bg: #020617;
+  --color-az-panel: #0B1020;
+  --color-az-panel-2: #111827;
+  --color-az-panel-3: #0E1223;
+  --color-az-input: #0F172A;
+  --color-az-terminal: #000810;
+  --color-az-border: #1E293B;
+  --color-az-border-hi: #334155;
+  --color-az-fg: #F8FAFC;
+  --color-az-fg-2: #E5E7EB;
+  --color-az-muted: #94A3B8;
+  --color-az-dim: #64748B;
+  --color-az-blue: #00D4FF;
+  --color-az-blue-soft: #7DD3FC;
+  --color-az-purple: #8B5CF6;
+  --color-az-purple-soft: #C4B5FD;
+  --color-az-green: #22C55E;
+  --color-az-green-soft: #86EFAC;
+  --color-az-amber: #F59E0B;
+  --color-az-red: #EF4444;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #050814;
+  color: #F8FAFC;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*::-webkit-scrollbar { width: 5px; height: 5px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 999px; }
+
+.azure-grid {
+  background-image:
+    linear-gradient(rgba(0, 212, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.04) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.glow-text { text-shadow: 0 0 32px rgba(0, 212, 255, 0.42); }
+
+.panel-glow {
+  box-shadow: 0 0 80px rgba(0, 212, 255, 0.11), inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+.flow-line::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -22px;
+  width: 1px;
+  height: 22px;
+  background: linear-gradient(to bottom, rgba(0, 212, 255, .75), rgba(34, 197, 94, .5));
+}

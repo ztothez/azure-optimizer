@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 resource "azurerm_resource_group" "main" {
   name     = "marketing-resources"
   location = "West Europe"
@@ -62,4 +63,112 @@ resource "azurerm_windows_web_app" "offsite" {
     type  = "SQLServer"
     value = "Server=some-server.ztothez.com;Integrated Security=SSPI"
   }
+=======
+{
+  "project": {
+    "name": "Azure Optimizer",
+    "subtitle": "Multi-agent infrastructure analysis",
+    "mode": "Demo Mode",
+    "status": "UI Online"
+  },
+  "pipeline": [
+    {
+      "name": "Terraform Configs",
+      "description": "IaC source",
+      "agent": "Configuration Agent"
+    },
+    {
+      "name": "Operational Metrics",
+      "description": "Cost + usage",
+      "agent": "Metrics Agent"
+    },
+    {
+      "name": "Supervisor Agent",
+      "description": "Correlation",
+      "agent": "Supervisor Agent"
+    },
+    {
+      "name": "AI Report",
+      "description": "Recommendations",
+      "agent": "Report Agent"
+    }
+  ],
+  "features": [
+    {
+      "title": "Multi-Agent Analysis",
+      "description": "Specialized agents coordinate infrastructure review."
+    },
+    {
+      "title": "Terraform Inspection",
+      "description": "Finds misconfiguration and missing guardrails."
+    },
+    {
+      "title": "Cost & Usage Metrics",
+      "description": "Identifies waste and underutilized resources."
+    },
+    {
+      "title": "AI Reporting",
+      "description": "Produces audit-style recommendations."
+    }
+  ],
+  "findings": [
+    {
+      "id": "AZ-CONFIG-001",
+      "severity": "High",
+      "source": "Terraform",
+      "title": "Missing backup policy on production resources",
+      "description": "Production resources should define backup coverage and recovery expectations.",
+      "recommendation": "Add backup configuration and document retention requirements."
+    },
+    {
+      "id": "AZ-METRIC-002",
+      "severity": "High",
+      "source": "Metrics",
+      "title": "Memory utilization at 100%",
+      "description": "Memory profile shows all available memory in use.",
+      "recommendation": "Review workload sizing, add memory headroom, or right-size the instance."
+    },
+    {
+      "id": "AZ-METRIC-003",
+      "severity": "Medium",
+      "source": "Metrics",
+      "title": "Low CPU utilization compared with provisioned cores",
+      "description": "Only 1 of 8 cores is currently used, suggesting possible over-provisioning.",
+      "recommendation": "Evaluate smaller compute profile or autoscaling policy."
+    },
+    {
+      "id": "AZ-GOV-004",
+      "severity": "Low",
+      "source": "Governance",
+      "title": "Tag governance coverage incomplete",
+      "description": "Tag governance score is below target for audit-ready resource ownership.",
+      "recommendation": "Require owner, environment, cost_center, and lifecycle tags."
+    }
+  ],
+  "exportBundle": [
+    {
+      "name": "Structured Findings",
+      "description": "JSON-ready issue details."
+    },
+    {
+      "name": "Action Plan",
+      "description": "Prioritized remediation steps."
+    },
+    {
+      "name": "Audit Trail",
+      "description": "Agent and report history."
+    }
+  ],
+"technologies": [
+  "Python",
+  "React",
+  "Next.js",
+  "TypeScript",
+  "Anthropic API",
+  "Terraform",
+  "SQLite",
+  "Docker",
+  "Multi-Agent"
+]
+>>>>>>> 734f14d (Add Next.js Azure Optimizer frontend)
 }
