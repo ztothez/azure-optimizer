@@ -5,7 +5,7 @@ AI-powered multi-agent infrastructure analysis platform that reviews Terraform c
 ## Live Demo
 
 Hugging Face Space:
-https://huggingface.co/spaces/ztothez/azure-optimizer
+https://ztothez-azure-optimizer.hf.space/
 
 ## Overview
 
